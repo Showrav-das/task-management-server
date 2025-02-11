@@ -8,7 +8,6 @@ import {
   updateProfileController,
 } from "../controllers/authController.js";
 import express from "express";
-import { protect } from "../middleware.js";
 const app = express();
 const router = Router();
 

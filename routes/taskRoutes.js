@@ -1,14 +1,5 @@
-import { Router } from "express";
-import {
-  forgotPasswordController,
-  loginController,
-  profileController,
-  registerController,
-  resetPasswordController,
-  updateProfileController,
-} from "../controllers/authController.js";
-import express from "express";
-import { protect } from "../middleware.js";
+import express, { Router } from "express";
+import { resetPasswordController } from "../controllers/authController.js";
 import {
   addTaskController,
   deleteTaskController,
