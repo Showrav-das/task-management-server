@@ -53,6 +53,32 @@ export const getTaskController = async (req, res) => {
   }
 };
 
+export const getsingleTaskController = async (req, res) => {
+  try {
+    const { id } = req.params;
+    console.log("id", id);
+    // const task = await User.findOne({ _id: user._id });
+
+    // if (!user) {
+    //   return res.status(404).json({
+    //     success: false,
+    //     message: "Task not found",
+    //   });
+    // }
+
+    // const tasks = await Task.find({ userId: user._id });
+    // res.status(200).json({
+    //   success: true,
+    //   tasks,
+    // });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: "Error fetching tasks",
+      error: error.message,
+    });
+  }
+};
 export const editTaskController = async (req, res) => {
   const { id } = req.params;
   const { title, description, status, dueDate } = req.body;

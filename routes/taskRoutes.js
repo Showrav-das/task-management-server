@@ -1,9 +1,9 @@
 import express, { Router } from "express";
-import { resetPasswordController } from "../controllers/authController.js";
 import {
   addTaskController,
   deleteTaskController,
   editTaskController,
+  getsingleTaskController,
   getTaskController,
 } from "../controllers/taskController.js";
 const app = express();
@@ -12,7 +12,7 @@ const router = Router();
 app.use(router);
 
 router.get("/:email", getTaskController);
-router.get("/:id", resetPasswordController);
+router.get("/:id", getsingleTaskController);
 router.post("/", addTaskController);
 router.put("/:id", editTaskController);
 router.delete("/:id", deleteTaskController);
