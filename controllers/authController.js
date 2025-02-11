@@ -78,13 +78,13 @@ export const forgotPasswordController = async (req, res) => {
     const mailOptions = {
       from: "showravdas8@gmail.com",
       to: email,
-      subject: "Verify your email address",
+      subject: "Please reset your password",
       html: `
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
             <h2 style="color: #333; text-align: center;">Verify Your Email Address</h2>
             
             <div style="background-color: #f9f9f9; padding: 20px; border-radius: 5px; margin: 20px 0;">
-              <p style="margin-bottom: 20px;">Thank you for registering! Please click the button below to verify your email address:</p>
+              <p style="margin-bottom: 20px;">We heard that you lost your GitHub password. Sorry about that! But don’t worry! You can use the following button to reset your password:</p>
               
               <div style="text-align: center;">
                 <a href="${verificationUrl}" 
@@ -95,7 +95,7 @@ export const forgotPasswordController = async (req, res) => {
                           text-decoration: none; 
                           border-radius: 5px;
                           font-weight: bold;">
-                  Verify Email Address
+                 Reset your password
                 </a>
               </div>
               
@@ -107,10 +107,6 @@ export const forgotPasswordController = async (req, res) => {
                 </a>
               </p>
             </div>
-            
-            <p style="font-size: 14px; color: #666; text-align: center;">
-              If you didn't create an account, you can safely ignore this email.
-            </p>
           </div>
         `,
     };

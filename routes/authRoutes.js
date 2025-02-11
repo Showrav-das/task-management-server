@@ -13,7 +13,7 @@ const router = Router();
 
 app.use(router);
 
-router.post("/register", registerController);
+router.post(" ", registerController);
 router.post("/login", loginController);
 router.post("/forgot-password", forgotPasswordController);
 router.post("/reset-password", resetPasswordController);
